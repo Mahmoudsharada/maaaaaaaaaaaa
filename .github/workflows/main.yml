@@ -1,1 +1,22 @@
 
+on:
+  push: 
+    branches: 
+      - master
+
+
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v3
+
+      - name: "login to docker hub"
+        run: docker login --username mahmoudsharada --password dckr_pat_flaidTj446vESB4mnodHpMnc1Q4
+        
+
+
